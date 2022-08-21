@@ -60,14 +60,14 @@ public class Person {
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Person{");
-        stringBuilder.append("name='" + this.name + "'");
-        stringBuilder.append(", surname='" + this.surname + "'");
+        stringBuilder.append("name='").append(getName()).append("'");
+        stringBuilder.append(", surname='").append(getSurname()).append("'");
         if (hasAge()) {
-            stringBuilder.append(", age='" + this.age + "'");
+            stringBuilder.append(", age='").append(getAge().getAsInt()).append("'");
         }
 
         if (hasAddress()) {
-            stringBuilder.append(", address='" + this.address + "'");
+            stringBuilder.append(", address='").append(getAddress()).append("'");
         }
         stringBuilder.append("}");
 
